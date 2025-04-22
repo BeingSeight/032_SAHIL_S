@@ -1,0 +1,119 @@
+:root {
+    --primary: #e62429;
+    --dark: #0c0c0c;
+    --light: #ffffff;
+    --overlay: rgba(0, 0, 0, 0.65);
+  }
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  body {
+    font-family: 'Roboto', sans-serif;
+    background-color: var(--dark);
+    color: var(--light);
+    padding-top: 70px;
+  }
+  .navbar {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    padding: 1rem 2rem;
+    background-color: rgba(0, 0, 0, 0.85);
+    backdrop-filter: blur(6px);
+    z-index: 1000;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+  }
+  .logo {
+    font-family: 'Staatliches', sans-serif;
+    font-size: 1.8rem;
+    color: var(--primary);
+    letter-spacing: 3px;
+  }
+  .banner-container {
+    position: relative;
+    height: 60vh;
+    background: url(../Srcs/megastar.jpg) center/cover no-repeat;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .banner-container::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: var(--overlay);
+  }
+  .banner-container .header-content {
+    position: relative;
+    text-align: center;
+  }
+  .banner-container .header-content h1 {
+    font-family: 'Staatliches', sans-serif;
+    font-size: 5rem;
+    letter-spacing: 2px;
+  }
+  .banner-container .header-content p {
+    font-size: 1.5rem;
+    margin-top: 0.5rem;
+  }
+  .section {
+    padding: 4rem 2rem;
+    max-width: 1200px;
+    margin: auto;
+  }
+  .section h2 {
+    font-family: 'Staatliches', cursive;
+    font-size: 2.5rem;
+    color: var(--primary);
+    margin-bottom: 1rem;
+  }
+  .bio {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2rem;
+    align-items: center;
+  }
+  .bio img {
+    width: 100%;
+    max-width: 400px;
+    border-radius: 10px;
+  }
+  .bio-text {
+    flex: 1;
+    font-size: 1.1rem;
+    line-height: 1.6;
+  }
+  .bio-text h2 {
+    font-family: 'Staatliches', cursive;
+    font-size: 2rem;
+    color: var(--primary);
+    margin-bottom: 0.5rem;
+  }
+  .qualities {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 1.5rem;
+  }
+  .quality {
+    background: #1a1a1a;
+    padding: 1.5rem;
+    border-radius: 10px;
+    transition: transform 0.3s;
+  }
+  .quality:hover {
+    transform: translateY(-5px);
+  }
+  footer {
+    text-align: center;
+    padding: 2rem;
+    font-size: 0.9rem;
+    opacity: 0.6;
+  }
+  
